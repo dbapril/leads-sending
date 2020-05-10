@@ -2,7 +2,6 @@
 
   if(isset($_POST)) {
     $sender = new Sender($_POST);
-    //print_r($sender->getTable());
     $sender->getTable();
   }
 
@@ -23,11 +22,9 @@
     }
 
     public function getTable() {
-      //ob_start();
       ini_set( 'error_reporting', E_ALL );
       ini_set( 'display_errors', true );
       include 'table.php';
-      //return ob_get_clean();
     }
 
     private function sendLead() {
